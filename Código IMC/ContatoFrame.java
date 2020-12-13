@@ -37,4 +37,39 @@ public class ContatoFrame implements ActionListener{
         f.setLayout(null);
         f.setVisible(true);  
     }
+
+    	@Override
+         public void actionPerformed(ActionEvent e) {  
+        String s1=tf1.getText();  
+        String s2=tf2.getText();
+        double peso=Double.parseDouble(s1);  
+        double altura=Double.parseDouble(s2);  
+        String c; 
+        double imc=peso/Math.pow(altura,2);
+        if(imc < 18.5){
+            c =" Abaixo do peso";
+        }
+        else if(imc < 24.9){
+            c=" Peso ideal";
+        }
+        else if(imc < 29.9){
+            c=" Levemente acima do peso";
+        }
+        else if(imc < 34.9){
+            c=" Primeiro grau de obesidade";
+        }
+        else if(imc < 39.9){
+            c=" Segundo grau de obesidade";
+        }
+        else
+            c=" Obesidade mórbida";
+        
+                String result=String.valueOf(c);  
+                tf3.setText(result);  
+    } 
+ 
+    public static void main(String[] args) {  
+        ContatoFrame contatoFrame = new ContatoFrame();
+        contatoFrame.Janela();
+    }
 }
