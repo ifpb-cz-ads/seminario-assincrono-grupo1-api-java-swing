@@ -10,26 +10,31 @@ public class ContatoFrame implements ActionListener{
     JButton b1; 
     
     public void Janela(){  
+      //Container responsável por todas as informações
         JFrame f= new JFrame("Calculo de IMC");
-        
-        //JLabel pesoLabel = new JLabel("Peso");
-        //Referente ao peso
+      
+        //Referente ao peso em kg
         tf1=new JTextField("Peso");
         tf1.setBounds(70,50,150,20);
-        //JLabel alturaLabel = new JLabel("Altura");
-        //Referente a altura
+
+        //Referente a altura do usuário em metros
         tf2=new JTextField("Altura");  
         tf2.setBounds(70,100,150,20);
-        //JLabel resultadoLabel = new JLabel("Resultado");
-        //Resultado
+
+        //Resultado 
         tf3=new JTextField("Resultado");  
         tf3.setBounds(50,150,180,20);  
-        tf3.setEditable(false);   
+        tf3.setEditable(false);
+
+        //botão que realiza a ação de calcular o IMC  
         b1=new JButton("TESTE");  
         b1.setBounds(100,200,100,50);    
-        b1.addActionListener(this);   
+        b1.addActionListener(this);
+
+        //adiciona todas as variáveis ao container 
         f.add(tf1);f.add(tf2);f.add(tf3);f.add(b1);  
         f.setSize(300,300);  
-        f.setLayout(null);  
+        f.setLayout(null);
         f.setVisible(true);  
     }
+}
