@@ -76,7 +76,7 @@ public class Main implements ActionListener {
 		select.add(feminino);
 		select.add(masculino);
 
-		button.setBounds(250, 300, 100, 40);
+		 button.setBounds(250, 460, 90, 30);
 		frame.add(button);
 
 		button.addActionListener(this);
